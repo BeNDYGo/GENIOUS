@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Music Extension",
+  "name": "GeniusButton",
   "version": "1.0",
   "description": "",
   "permissions": [
@@ -8,8 +8,8 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://www.google.com/*", "https://genius.com/*", "https://music.yandex.com/*"],
-      "js": ["main.js"]
+      "matches": ["https://genius.com/*", "https://music.yandex.com/*", "https://soundcloud.com/*"],
+      "js": ["main.js", "yandex_music.js", "soundcloud.js"]
     }
   ]
 }
