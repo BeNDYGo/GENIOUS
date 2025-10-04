@@ -39,7 +39,7 @@ function CreateButtonSoundcloud(){
     }
     
     try {
-        PalyBar.insertAdjacentHTML('beforeend', SampleButtonHTML);
+        PalyBar.insertAdjacentHTML('beforeend', SampleButtonHTMLSoundcloud);
         
         const btn = document.getElementById('ButtonSearchGenius');
         log('Кнопка создана');

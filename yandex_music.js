@@ -52,7 +52,7 @@ function CreateButtonYandex() {
     }
 
     try {
-        BarMeta.insertAdjacentHTML('beforeend', SampleButtonHTML);
+        BarMeta.insertAdjacentHTML('beforeend', SampleButtonHTMLYandex);
         
         const btn = document.getElementById('ButtonSearchGenius');
         log('Кнопка создана');
