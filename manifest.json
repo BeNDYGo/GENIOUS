@@ -8,7 +8,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://genius.com/*", "https://music.yandex.com/*", "https://soundcloud.com/*"],
+      "matches": ["https://genius.com/*", "https://music.yandex.ru/*", "https://soundcloud.com/*"],
       "js": ["main.js", "yandex_music.js", "soundcloud.js"]
     }
   ]
