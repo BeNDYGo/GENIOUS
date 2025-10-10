@@ -75,41 +75,9 @@ function CreateButtonYandex() {
     }
 }
 
-// --- Обработчики ---
-document.addEventListener('click', () => {
-    CreateButtonYandex();
-});
-
+// --- Обработчик ---
 if (document.body) {
     document.body.addEventListener('click', () => {
         CreateButtonYandex();
     });
 }
-
-function Init() {
-    CreateButtonYandex();
-}
-
-function SetupObserver() {
-    try {
-        const observer = new MutationObserver((mutations) => {
-            CreateButtonYandex();
-        });
-
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
-    } catch (error) {
-        logError('Не удалось настроить наблюдатель:', error);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    try {
-        Init();
-        SetupObserver();
-    } catch (error) {
-        logError('Инициализация не удалась:', error);
-    }
-});

@@ -62,41 +62,9 @@ function CreateButtonSoundcloud(){
     }
 };
 
-// --- Обработчики ---
-document.addEventListener('click', () => {
-    CreateButtonSoundcloud();
-});
-
+// --- Обработчик ---
 if (document.body) {
     document.body.addEventListener('click', () => {
         CreateButtonSoundcloud();
     });
 }
-
-function Init() {
-    CreateButtonSoundcloud();
-}
-
-function SetupObserver() {
-    try {
-        const observer = new MutationObserver((mutations) => {
-            CreateButtonSoundcloud();
-        });
-
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
-    } catch (error) {
-        logError('Не удалось настроить наблюдатель:', error);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    try {
-        Init();
-        SetupObserver();
-    } catch (error) {
-        logError('Инициализация не удалась:', error);
-    }
-});

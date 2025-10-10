@@ -8,8 +8,16 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://genius.com/*", "https://music.yandex.ru/*", "https://soundcloud.com/*"],
-      "js": ["main.js", "yandex_music.js", "soundcloud.js"]
+      "matches": ["https://genius.com/*"],
+      "js": ["js/main.js", "js/genius.js"]
+    },
+    {
+      "matches": ["https://soundcloud.com/*"],
+      "js": ["js/main.js", "js/soundcloud.js"]
+    },
+    {
+      "matches": ["https://music.yandex.ru/*"],
+      "js": ["js/main.js", "js/yandex_music.js"]
     }
   ]
 }
